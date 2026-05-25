@@ -2,11 +2,6 @@
 
 A terminal-based game written in C. Features difficulty levels, attempt limits, a score system, and replay — compiled with GCC, zero external dependencies.
 
-![Language](https://img.shields.io/badge/language-C99-blue)
-![Build](https://img.shields.io/badge/build-gcc%20%2F%20clang-green)
-![License](https://img.shields.io/badge/license-MIT-yellow)
-![Level](https://img.shields.io/badge/level-beginner--intermediate-purple)
-
 ---
 
 ## Table of Contents
