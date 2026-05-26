@@ -1,4 +1,4 @@
-# 🎯 Number Guessing Game — Upgraded
+# Number Guessing Game — Upgraded
 
 A terminal-based game written in C. Features difficulty levels, attempt limits, a score system, and replay — compiled with GCC, zero external dependencies.
 
