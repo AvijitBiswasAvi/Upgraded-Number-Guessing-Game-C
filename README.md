@@ -24,9 +24,9 @@ A terminal-based game written in C. Features difficulty levels, attempt limits, 
 | Difficulty levels | Easy / Medium / Hard — different range and attempt limit per level |
 | Limited attempts | Exhaust your tries and it's Game Over — the secret number is revealed |
 | Score system | Fewer guesses → higher score, scaled by difficulty multiplier |
-| 🔁 Replay option | Win or lose, choose to restart instantly with a fresh round |
-| 🔼🔽 Live hints | "Too high" / "Too low" after every guess, with remaining attempts shown |
-| ⚙️ Pure C stdlib | Only `<stdio.h>`, `<stdlib.h>`, `<time.h>` — no external libraries needed |
+| Replay option | Win or lose, choose to restart instantly with a fresh round |
+| Live hints | "Try higher number" / "Try lower number" after every guess, with remaining attempts shown |
+| Pure C stdlib | Only `<stdio.h>`, `<stdlib.h>`, `<time.h>` — no external libraries needed |
 
 ---
 
