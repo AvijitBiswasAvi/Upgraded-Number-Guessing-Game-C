@@ -17,7 +17,7 @@ A terminal-based game written in C. Features difficulty levels, attempt limits, 
 
 ---
 
-## Features Overview
+### Features Overview
 
 | Feature | Description |
 |---|---|
