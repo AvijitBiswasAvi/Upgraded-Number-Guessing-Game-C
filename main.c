@@ -49,13 +49,14 @@ int main()
 
             if (no_of_guesses == 10)
             {
-                printf("--! GAME OVER !--");
+                printf("--! GAME OVER !--\n");
+                printf("The number is = %d\n", random_1);
                 break;
             }
 
         } while (guessed != random_1);
 
-        score = (10 - no_of_guesses + 1) * 100;
+        score = (10 - no_of_guesses + 1) * 10;
 
         printf("Number of gusses = %d\n", no_of_guesses);
         printf("You'r score = %d\n", score);
