@@ -35,7 +35,7 @@ A terminal-based game written in C. Features difficulty levels, attempt limits, 
 | Level | Number Range | Max Attempts | Notes |
 |---|---|---|---|
 | Easy | 1 – 100 | 10 tries | Ideal for first run |
-| Medium | 1 – 200 | 7 tries | Binary search pays off here |
+| Medium | 1 – 200 | 8 tries | Binary search pays off here |
 | Hard | 1 – 500 | 5 tries | Near-impossible without strategy |
 
 ---
