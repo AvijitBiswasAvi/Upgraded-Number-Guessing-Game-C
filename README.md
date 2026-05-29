@@ -131,30 +131,4 @@ Play again? (y/n): y
 5. **Win or Game Over** — correct guess prints score; attempts exhausted reveals the number
 6. **Replay prompt** — enter `y` to restart, `n` to exit
 
----
-
-## Roadmap
-
-### ✅ Completed
-- `rand()` number generation
-- Guess loop + hints
-- Attempt counter
-- Difficulty selection
-- Attempt limit + Game Over
-- Replay prompt
-- Score calculation
-
-### 🔄 Ideas to Add
-- High score saved to file (`fwrite`)
-- Input validation loop
-- Hot/cold proximity hints
-- Session leaderboard
-
-### 🔮 Future Scope
-- `ncurses` TUI interface
-- Two-player mode
-- Cross-platform Makefile
-- Unit tests with CMocka
-
----
 
