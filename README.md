@@ -158,12 +158,3 @@ Play again? (y/n): y
 
 ---
 
-## Contributing
-
-Contributions are welcome. Fork the repo, create a branch (`feature/your-idea`), and open a pull request. Keep code readable — descriptive variable names, comments on non-obvious logic — and make sure it compiles cleanly with `-Wall -Wextra` before submitting.
-
-Found a bug? Open an issue with your OS, compiler version, and steps to reproduce.
-
----
-
-MIT License · written in C99 · compiled with `gcc` · no external dependencies
