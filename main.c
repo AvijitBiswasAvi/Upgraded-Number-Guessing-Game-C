@@ -4,178 +4,102 @@
 
 int main()
 {
+
     char choice_of_replay;
+
+    srand(time(0));
 
     do
     {
 
-        srand(time(0));
-
-        int random_1 = rand() % 100 + 1;
-        int random_2 = rand() % 200 + 1;
-        int random_3 = rand() % 500 + 1;
-
-        int no_of_guesses = 0;
-        int guessed;
         int choice;
-        int score;
+        int random;
+        int max_attempts;
+        int guessed;
+        int attempts = 0;
 
-        printf("==== YOUR OPTIONS ====\n");
-        printf("1. Easy (1 --> 100)\n");
-        printf("2. Medium (1 --> 200)\n");
-        printf("3. Hard (1 --> 500)\n");
-        printf("======================\n");
+        printf("\n========= YOUR OPTIONS ========\n");
+        printf("1. Easy (1 - 100)[ 10 Tries ]\n");
+        printf("2. Medium (1 - 200)[ 8 Tries ]\n");
+        printf("3. Hard (1 - 500)[ 6 Tries ]\n");
+        printf("===============================\n");
 
-        printf("Enter your choice = ");
+        printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice)
+        // set difficulty
+        if (choice == 1)
         {
-        case 1:
-            do
-            {
-                printf("Guess the number = ");
-                scanf("%d", &guessed);
-
-                if (guessed > random_1)
-                {
-                    printf("Try lower number\n");
-                }
-                else if (guessed < random_1)
-                {
-                    printf("Try higher number\n");
-                }
-                else
-                {
-                    printf("--! Congratulations !--\n");
-                }
-                no_of_guesses++;
-
-                if (no_of_guesses == 10)
-                {
-                    printf("--! GAME OVER !--\n");
-                    printf("The number is = %d\n", random_1);
-                    break;
-                }
-
-            } while (guessed != random_1);
-
-            score = (10 - no_of_guesses + 1) * 100;
-
-            printf("Number of gusses = %d\n", no_of_guesses);
-            if (guessed != random_1)
-            {
-                printf("You'r score = 0\n");
-                break;
-            }
-            else
-            {
-                printf("You'r score = %d\n", score);
-            }
-
-            printf("Play again? (y/n) = ");
-            scanf(" %c", &choice_of_replay);
-            break;
-
-        case 2:
-            do
-            {
-                printf("Guess the number = ");
-                scanf("%d", &guessed);
-
-                if (guessed > random_2)
-                {
-                    printf("Try lower number\n");
-                }
-                else if (guessed < random_2)
-                {
-                    printf("Try higher number\n");
-                }
-                else
-                {
-                    printf("--! Congratulations !--\n");
-                }
-                no_of_guesses++;
-
-                if (no_of_guesses == 8)
-                {
-                    printf("--! GAME OVER !--\n");
-                    printf("The number is = %d\n", random_2);
-                    break;
-                }
-
-            } while (guessed != random_2);
-
-            score = (8 - no_of_guesses + 1) * 200;
-
-            printf("Number of gusses = %d\n", no_of_guesses);
-            if (guessed != random_2)
-            {
-                printf("You'r score = 0\n");
-                break;
-            }
-            else
-            {
-                printf("You'r score = %d\n", score);
-            }
-
-            printf("Play again? (y/n) = ");
-            scanf(" %c", &choice_of_replay);
-            break;
-
-        case 3:
-            do
-            {
-                printf("Guess the number = ");
-                scanf("%d", &guessed);
-
-                if (guessed > random_3)
-                {
-                    printf("Try lower number\n");
-                }
-                else if (guessed < random_3)
-                {
-                    printf("Try higher number\n");
-                }
-                else
-                {
-                    printf("--! Congratulations !--\n");
-                }
-                no_of_guesses++;
-
-                if (no_of_guesses == 6)
-                {
-                    printf("--! GAME OVER !--\n");
-                    printf("The number is = %d\n", random_3);
-                    break;
-                }
-
-            } while (guessed != random_3);
-
-            score = (6 - no_of_guesses + 1) * 300;
-
-            printf("Number of gusses = %d\n", no_of_guesses);
-            if (guessed != random_3)
-            {
-                printf("You'r score = 0\n");
-                break;
-            }
-            else
-            {
-                printf("You'r score = %d\n", score);
-            }
-
-            printf("Play again? (y/n) = ");
-            scanf(" %c", &choice_of_replay);
-            break;
-
-        default:
-            printf("--INVALID CHOICE--");
-            printf("Play again? (y/n) = ");
-            scanf(" %c", &choice_of_replay);
-            break;
+            random = rand() % 100 + 1;
+            max_attempts = 10;
         }
+        else if (choice == 2)
+        {
+            random = rand() % 200 + 1;
+            max_attempts = 8;
+        }
+        else if (choice == 3)
+        {
+            random = rand() % 500 + 1;
+            max_attempts = 6;
+        }
+        else
+        {
+            printf("Invalid choice! Defaulting to Easy mode.\n");
+            random = rand() % 100 + 1;
+            max_attempts = 10;
+        }
+
+        // guessing loop
+        do
+        {
+
+            printf("Guess the number: ");
+            scanf("%d", &guessed);
+
+            if (guessed > random)
+            {
+                printf("Try lower number\n");
+            }
+            else if (guessed < random)
+            {
+                printf("Try higher number\n");
+            }
+            else
+            {
+                printf("\n--Congratulations! You guessed it!--\n");
+            }
+
+            attempts++;
+
+            if (attempts == max_attempts && guessed != random)
+            {
+                printf("\n-- GAME OVER --\n");
+                printf("The number was: %d\n", random);
+                break;
+            }
+
+        } while (guessed != random);
+
+        // result
+        if (guessed == random)
+        {
+            int score = (max_attempts - attempts + 1) * 100;
+
+            if (score < 0)
+                score = 0;
+
+            printf("Number of guesses: %d\n", attempts);
+            printf("Your score: %d\n", score);
+        }
+
+        // replay option
+        printf("\nPlay again? (y/n): ");
+        scanf(" %c", &choice_of_replay);
+
     } while (choice_of_replay == 'y');
+
+    printf("Thanks for playing!\n");
 
     return 0;
 }
