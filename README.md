@@ -9,11 +9,7 @@ A terminal-based game written in C. Features difficulty levels, attempt limits, 
 1. [Features Overview](#features-overview)
 2. [Difficulty Levels](#difficulty-levels)
 3. [Score System](#score-system)
-4. [Project Structure](#project-structure)
-5. [Build & Run](#build--run)
-6. [Game Flow](#game-flow)
-7. [Roadmap](#roadmap)
-8. [Contributing](#contributing)
+4. [Game Flow](#game-flow)
 
 ---
 
@@ -61,12 +57,12 @@ Choose difficulty: [1] Easy  [2] Medium  [3] Hard
 2
 
 Medium selected — guess a number between 1 and 100.
-You have 7 attempts.
+You have 8 attempts.
 
 50   → Too low!
 75   → Too high!
 63   → Too low!
-69   → 🎉 Correct! Solved in 4 guesses. Score: 8
+69   → 🎉 Correct! Solved in 4 guesses. Score: 500
 
 Play again? (y/n): y
 
