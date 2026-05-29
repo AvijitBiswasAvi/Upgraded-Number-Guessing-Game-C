@@ -53,56 +53,6 @@ score = (max_attempts - attempts_used + 1) x difficulty_multiplier
 
 ---
 
-## Project Structure
-
-number-guessing-game/
-├── game.c          # all game logic — single source file
-├── Makefile        # optional: build shortcut
-├── README.md
-└── LICENSE
-
----
-
-## Build & Run
-
-**Requirements:** GCC or Clang, any OS with a C99-compatible compiler.
-
-```bash
-# clone
-git clone https://github.com/your-username/number-guessing-game
-cd number-guessing-game
-
-# compile with gcc
-gcc -std=c99 -Wall -o game game.c
-
-# or with clang
-clang -std=c99 -Wall -o game game.c
-
-# run
-./game
-```
-
-**Optional Makefile:**
-
-```makefile
-CC     = gcc
-CFLAGS = -std=c99 -Wall -Wextra
-
-all:
-	$(CC) $(CFLAGS) -o game game.c
-
-clean:
-	rm -f game
-```
-
-**Headers used:**
-
-```c
-#include <stdio.h>    // printf, scanf
-#include <stdlib.h>   // rand, srand
-#include <time.h>     // time() for srand seed
-```
-
 **Sample session:**
 
 Welcome to the Number Guessing Game!
