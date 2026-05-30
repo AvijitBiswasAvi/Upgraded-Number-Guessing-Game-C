@@ -27,7 +27,6 @@ int main()
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        // set difficulty
         if (choice == 1)
         {
             random = rand() % 100 + 1;
