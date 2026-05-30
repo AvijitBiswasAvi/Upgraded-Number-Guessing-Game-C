@@ -79,7 +79,6 @@ int main()
 
         } while (guessed != random);
 
-        // result
         if (guessed == random)
         {
             int score = (max_attempts - attempts + 1) * 100;
