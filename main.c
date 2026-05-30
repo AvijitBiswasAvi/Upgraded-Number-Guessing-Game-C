@@ -90,7 +90,6 @@ int main()
             printf("Your score: %d\n", score);
         }
 
-        // replay option
         printf("\nPlay again? (y/n): ");
         scanf(" %c", &choice_of_replay);
 
