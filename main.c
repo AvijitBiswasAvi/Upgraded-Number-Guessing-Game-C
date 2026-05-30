@@ -49,7 +49,6 @@ int main()
             max_attempts = 10;
         }
 
-        // guessing loop
         do
         {
 
